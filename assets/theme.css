@@ -1,0 +1,165 @@
+/* Fundo geral da aplicação */
+html, body, [data-testid="stAppViewContainer"] {
+    background: radial-gradient(circle at top, #020617 0%, #020617 30%, #000000 120%);
+    color: var(--text-color);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Remove a barra branca padrão do cabeçalho do Streamlit */
+[data-testid="stHeader"] {
+    background: transparent;
+    box-shadow: none;
+}
+
+/* Container central — fluido, com margem em % e não largura fixa */
+div.block-container {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    max-width: 100%;
+}
+
+/* Títulos */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+/* Subtítulos / textos auxiliares */
+p {
+    color: var(--text-color);
+}
+
+/* Tabs alinhadas ao centro */
+.stTabs [data-baseweb="tab-list"] {
+    justify-content: center;
+    margin-top: 0.25rem;
+}
+
+/* Cards de KPI (st.metric) */
+.stMetric {
+    border-radius: var(--border-radius);
+    background: var(--card-background);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.45);
+    padding: 0.75rem 1rem;
+}
+
+/* Valores da métrica em branco mais forte */
+.stMetric > div:nth-child(2) {
+    color: #f9fafb;
+    font-weight: 600;
+}
+
+/* Legenda das métricas (rótulo) mais suave */
+.stMetric > div:nth-child(1) {
+    color: var(--muted-text-color);
+}
+
+/* Divisores discretos */
+hr, .stDivider {
+    border-color: var(--muted-border-color) !important;
+}
+
+/* Expander dos filtros suspensos */
+.streamlit-expanderHeader {
+    background-color: rgba(15, 23, 42, 0.95) !important;
+    color: var(--text-color) !important;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.streamlit-expanderContent {
+    background-color: rgba(15, 23, 42, 0.98) !important;
+}
+
+
+/* Fundo e texto dos selects quando o filtro está aberto */
+.streamlit-expanderContent [data-baseweb="select"] > div {
+    background-color: #020617 !important;
+    color: var(--text-color) !important;
+}
+
+/* Lista de opções do dropdown */
+.streamlit-expanderContent ul[role="listbox"] {
+    background-color: #020617 !important;
+    color: var(--text-color) !important;
+    border: 1px solid #1f2937 !important;
+}
+
+
+/* Fundo e borda dos multiselects dentro dos filtros suspensos */
+[data-baseweb="select"] > div {
+    background-color: #020617 !important;      /* fundo escuro */
+    border-radius: 0.75rem;                    /* cantos suaves, sem "pílula" gigante */
+    border: 1px solid #1f2937 !important;      /* borda discreta */
+    color: var(--text-color) !important;
+}
+
+/* Chips das opções selecionadas (tags) – retângulos levemente arredondados */
+[data-testid="stMultiSelect"] [data-baseweb="tag"] {
+    border-radius: 0.5rem;
+}
+
+/* Ícone da setinha dos selects */
+[data-baseweb="select"] svg {
+    color: var(--muted-text-color);
+}
+
+/* Lista de opções quando o usuário abre o dropdown */
+ul[role="listbox"] {
+    background-color: #020617 !important;
+    color: var(--text-color) !important;
+    border: 1px solid #1f2937 !important;
+}
+
+/* Botões padrão do Streamlit */
+.stButton > button {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    border-radius: 999px;
+    border: none;
+    padding: 0.35rem 1.1rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.stButton > button:hover {
+    background-color: #fb923c;
+}
+
+/* Gráficos plotly sem fundo branco */
+.js-plotly-plot .plotly .main-svg {
+    background-color: transparent !important;
+}
+
+/* Texto geral dos gráficos Plotly (tudo que é texto dentro do SVG) */
+.js-plotly-plot .plotly text {
+    fill: #e5e7eb !important;    /* quase branco; se quiser mais claro, use #ffffff */
+}
+
+/* Títulos dos eixos */
+.js-plotly-plot .g-xtitle text,
+.js-plotly-plot .g-ytitle text {
+    fill: #f9fafb !important;
+    font-weight: 600;
+}
+
+/* Ticks dos eixos (números das escalas) */
+.js-plotly-plot .xtick text,
+.js-plotly-plot .ytick text {
+    fill: #e5e7eb !important;
+}
+
+/* Legenda dos gráficos */
+.js-plotly-plot .legend text {
+    fill: #e5e7eb !important;
+}
+
+/* Subtítulo do cabeçalho */
+.header-subtitle {
+    font-size: 0.9rem;
+    color: var(--muted-text-color);
+    margin-top: 0.15rem;
+}
+
+
